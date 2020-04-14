@@ -1,21 +1,22 @@
 import React from 'react';
+
+import Screen from './Screen';
 import '../App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Screen />
         <div id="controls-box">
           <div id="wheel-outer">
-            <span id="top">Top</span>
-            <span id="left">Left</span>
-            <span id="right">Right</span>
-            <span id="bottom">Bottom</span>
-            <div id="wheel-inner">
-            </div>
+            <span id="top">MENU</span>
+            <span id="left"><i class="fas fa-fast-backward"></i></span>
+            <span id="right"><i class="fas fa-fast-forward"></i></span>
+            <span id="bottom"><i class="fas fa-play"></i></span>
+          </div>
+          <div id="wheel-inner">
           </div>
         </div>
-      </header>
     </div>
   );
 }
