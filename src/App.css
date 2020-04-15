@@ -8,23 +8,30 @@ body{
    height: 32vh;
    width: 15.5vw;
    font-size: 0.9rem;
-   background-color: white;
+   background-color: black;
    position: absolute;
    transform: translate(-50%, -50%);
    border: 3px solid gainsboro;
 }
 
-.Screen strong{
+
+.side-menu{
+    height: 32vh;
+    width: 10vw;
+    background-color: white;
+}
+
+.side-menu strong{
     position: absolute;
     padding: 8px 0 0 8px;
 }
 
-.Screen ul{
+.side-menu ul{
     position: absolute;
     padding: 23px 0 0 8px;
 }
 
-.Screen li{
+.side-menu li{
     padding: 5px 0;
     list-style: none;
 }
