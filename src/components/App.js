@@ -11,18 +11,48 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      clicked: false
+      clickedSongs: undefined,
+      clickedAlbums: undefined,
+      clickedArtists: undefined,
+      clickedPlaylists: undefined
     }
   }
   handle = () => {
-      console.log(document.getElementById("songs").classList[0]);
+    if(document.getElementById("songs").classList[0]){
+      this.setState({
+        clickedSongs:true
+      })
+    }else if(document.getElementById("albums").classList[0]){
+      this.setState({
+        clickedAlbums:true
+      })
+    }else if(document.getElementById("artists").classList[0]){
+      this.setState({
+        clickedArtists:true
+      })
+    }else if(document.getElementById("playlists").classList[0]){
+      this.setState({
+        clickedPlaylists:true
+      })
+    }
+    
   }
   render() {
+    const {
+      clickedSongs,
+      clickedAlbums,
+      clickedArtists,
+      clickedPlaylists
+    } = this.state;
     return (
       <div className="App">
-      {!this.state.clicked ?
-      <Screen /> :
-      <Songs />}
+      {
+      clickedSongs ? <Songs /> : 
+      clickedAlbums ? <Albums /> : 
+      clickedArtists ? <Artists /> : 
+      clickedPlaylists ? <Playlists /> :
+      <Screen /> 
+      }
         <div id="controls-box">
             <div id="wheel-outer">
               <span id="top">MENU</span>
