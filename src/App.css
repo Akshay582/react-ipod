@@ -3,29 +3,45 @@ body{
     font-family: 'Helvetica', Arial;
 }
 
+/* Style for page selected from the side-menu */
+.page-selected{
+    margin: 26vh 0 0 50vw;
+    height: 32vh;
+    width: 15.5vw;
+    font-size: 0.9rem;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 3px solid black;
+}
+
+/* for the screen with side-menu */
 .Screen{
-   margin: 28vh 0 0 50vw;
+   margin: 26vh 0 0 50vw;
    height: 32vh;
    width: 15.5vw;
    font-size: 0.9rem;
-   background-color: black;
+   background-image: url('https://wallpaperaccess.com/full/307324.jpg');
+   background-size: cover;
    position: absolute;
    transform: translate(-50%, -50%);
-   border: 3px solid gainsboro;
+   border: 3px solid black;
 }
 
-
+/* for the side-menu */
 .side-menu{
     height: 32vh;
     width: 10vw;
     background-color: white;
 }
 
+/* for the title */
 .side-menu strong{
     position: absolute;
     padding: 8px 0 0 8px;
 }
 
+/* for the list in side-menu */
 .side-menu ul{
     position: absolute;
     padding: 23px 0 0 8px;
@@ -36,28 +52,32 @@ body{
     list-style: none;
 }
 
+/* for the selective class that will be used to go to it's components */
 .active{
     color: white;
     background-color: blue;
     box-shadow: 2px 2px 5px 0px #3783D8;
 }
 
+/* for enhancement of the formatting of the selected tag by active class */
 .active::after{
     content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0
-    \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0>";
+    \00a0\00a0\00a0\00a0\00a0\00a0>";
 }
 
+/* styling the controls-box */
 #controls-box{
-   margin: 50vh 0 0 50vw;
+   margin: 53.5vh 0 0 50vw;
    height: 22vh;
    width: 16vw;
    font-weight: bold;
    color: #B9B9B9;
-   background-color: gainsboro;
+   background-image: linear-gradient(to right, gray, gainsboro);
    position: absolute;
    transform: translate(-50%, -50%);
 }
 
+/* for the button of the ipod */
 #wheel-outer{
     margin: auto;
     margin-top: 11vh;
@@ -69,6 +89,7 @@ body{
     background-color: white;
 }
 
+/* for the selection button */
 #wheel-inner{
     margin-top: -21vh;
     height: 7vh;
@@ -77,17 +98,10 @@ body{
     transform: translate(155%, -50%);
     border-radius: 50%;
     position: absolute;
-    background-color: gainsboro;
+    background-image: linear-gradient(to right, grey, gainsboro);
 }
 
-#interaction {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 1000;
-}
-
+/* for all the buttons alignment and placement */
 #top{
     position: absolute;
     margin-left: 36%;
